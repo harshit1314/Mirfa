@@ -3,7 +3,7 @@
     "rewrites": [
         {
             "source": "/api/:match*",
-            "destination": "https://mirfa-api.vercel.app/:match*"
+            "destination": "https://mirfa-api-harshit1314.vercel.app/:match*"
         }
     ]
 }
