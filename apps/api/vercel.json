@@ -1,9 +1,14 @@
 {
     "version": 2,
-    "rewrites": [
+    "functions": {
+        "dist/index.js": {
+            "runtime": "nodejs18.x"
+        }
+    },
+    "routes": [
         {
-            "source": "/(.*)",
-            "destination": "/api"
+            "src": "/(.*)",
+            "dest": "dist/index.js"
         }
     ]
 }
