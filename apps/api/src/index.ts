@@ -58,6 +58,10 @@ const DecryptSchema = z.object({
 });
 
 // Routes
+app.get("/", async () => {
+    return { status: "ok", message: "Mirfa API is running" };
+});
+
 app.post("/tx/encrypt", async (request, reply) => {
     const result = EncryptSchema.safeParse(request.body);
     if (!result.success) {
