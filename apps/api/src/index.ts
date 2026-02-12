@@ -35,9 +35,16 @@ if (!MASTER_KEY || MASTER_KEY.length !== 64) {
 }
 
 app.register(cors, {
-    origin: "*", // In production, you should specify the actual origin
+    origin: true,
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allowedHeaders: ["Content-Type", "Authorization"],
+    preflightContinue: false,
+    optionsSuccessStatus: 204,
+});
+
+// Add global OPTIONS handler for Vercel
+app.options("*", async (_request, reply) => {
+    reply.code(204).send();
 });
 
 // Zod schemas
