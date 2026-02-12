@@ -34,7 +34,11 @@ if (!MASTER_KEY || MASTER_KEY.length !== 64) {
     process.exit(1);
 }
 
-app.register(cors);
+app.register(cors, {
+    origin: "*", // In production, you should specify the actual origin
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+});
 
 // Zod schemas
 const EncryptSchema = z.object({
