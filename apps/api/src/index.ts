@@ -7,7 +7,9 @@ import { nanoid } from "nanoid";
 import "dotenv/config";
 
 const app = Fastify({ logger: true });
-const db = new Database("db.sqlite");
+const isProd = process.env.NODE_ENV === "production";
+const dbPath = isProd ? "/tmp/db.sqlite" : "db.sqlite";
+const db = new Database(dbPath);
 
 // Initialize DB
 db.exec(`
