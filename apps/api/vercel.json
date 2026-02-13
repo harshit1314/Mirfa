@@ -1,5 +1,4 @@
 {
-  "buildCommand": "pnpm install --filter @mirfa/api && pnpm run build --filter @mirfa/api",
-  "installCommand": null,
+  "buildCommand": "tsc",
   "outputDirectory": "dist"
 }
