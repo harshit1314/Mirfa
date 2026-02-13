@@ -3,9 +3,9 @@
     "version": "1.0.0",
     "main": "dist/index.js",
     "scripts": {
-        "build": "tsup src/index.ts --format cjs --minify --out-dir api",
-        "dev": "tsup src/index.ts --format cjs --watch --onSuccess \"node api/index.js\"",
-        "start": "node api/index.js",
+        "build": "tsup src/index.ts --format cjs --minify --out-dir dist",
+        "dev": "tsup src/index.ts --format cjs --watch --onSuccess \"node dist/index.js\"",
+        "start": "node dist/index.js",
         "test": "vitest run"
     },
     "dependencies": {

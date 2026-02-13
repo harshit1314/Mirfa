@@ -7,7 +7,7 @@
             ],
             "outputs": [
                 ".next/**",
-                "api/**"
+                "dist/**"
             ]
         },
         "dev": {
