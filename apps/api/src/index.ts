@@ -30,8 +30,17 @@ db.exec(`
 
 const MASTER_KEY = process.env.MASTER_KEY || "";
 if (!MASTER_KEY || MASTER_KEY.length !== 64) {
-    console.error("CRITICAL: MASTER_KEY must be 32 bytes hex (64 chars)");
-    process.exit(1);
+    const errorMsg = "CRITICAL: MASTER_KEY must be 32 bytes hex (64 chars)";
+    console.error(errorMsg);
+    if (process.env.NODE_ENV === "production") {
+        // In production, add error handler instead of crashing
+        app.setErrorHandler(async (error, request, reply) => {
+            console.error(error);
+            return reply.status(500).send({ error: "Server configuration error", code: "CONFIG_ERROR" });
+        });
+    } else {
+        process.exit(1);
+    }
 }
 
 app.register(cors, {
