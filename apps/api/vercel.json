@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm run build",
-  "installCommand": "pnpm install",
+  "buildCommand": "echo 'Using pre-built dist'",
+  "installCommand": "pnpm install --prod",
   "outputDirectory": "dist"
 }

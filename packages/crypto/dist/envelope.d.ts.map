@@ -1,0 +1,1 @@
+{"version":3,"file":"envelope.d.ts","sourceRoot":"","sources":["../src/envelope.ts"],"names":[],"mappings":"AAQA,OAAO,EAAE,cAAc,EAAoB,YAAY,EAAE,MAAM,SAAS,CAAC;AAczE,qBAAa,kBAAkB;IACjB,OAAO,CAAC,SAAS;gBAAT,SAAS,EAAE,MAAM;IAErC;;OAEG;IACH,cAAc,CAAC,OAAO,EAAE,MAAM,EAAE,OAAO,EAAE,MAAM,GAAG,cAAc;IA8BhE;;OAEG;IACH,cAAc,CACZ,MAAM,EAAE,cAAc,GACrB,MAAM,GAAG,YAAY;CAkCzB"}
