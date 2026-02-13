@@ -10,9 +10,6 @@
     "resolveJsonModule": true,
     "declaration": true,
     "sourceMap": true,
-    "outDir": "./dist",
     "moduleResolution": "bundler"
-  },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  }
 }

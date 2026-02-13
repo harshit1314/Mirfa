@@ -1,26 +1,23 @@
 {
-    "name": "@mirfa/api",
-    "version": "1.0.0",
-    "main": "dist/index.js",
-    "scripts": {
-        "build": "tsup src/index.ts --format cjs --minify --out-dir api",
-        "dev": "tsup src/index.ts --format cjs --watch --onSuccess \"node api/index.js\"",
-        "start": "node api/index.js",
-        "test": "vitest run"
-    },
-    "dependencies": {
-        "@fastify/cors": "^10.0.0",
-        "fastify": "^5.0.0",
-        "zod": "^3.0.0",
-        "@mirfa/crypto": "workspace:*",
-        "better-sqlite3": "^11.0.0",
-        "dotenv": "^16.0.0",
-        "nanoid": "^5.0.0"
-    },
-    "devDependencies": {
-        "@types/better-sqlite3": "^7.6.0",
-        "tsup": "^8.0.0",
-        "typescript": "^5.0.0",
-        "vitest": "^1.0.0"
-    }
+  "name": "@mirfa/api",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "node --import tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@mirfa/crypto": "workspace:*",
+    "@fastify/cors": "^9.0.1",
+    "fastify": "^4.25.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
 }
