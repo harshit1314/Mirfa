@@ -42,9 +42,14 @@ app.register(cors, {
     optionsSuccessStatus: 204,
 });
 
-// Add global OPTIONS handler for Vercel
+// Add preflight handler
 app.options("*", async (_request, reply) => {
-    reply.code(204).send();
+    reply
+        .header("Access-Control-Allow-Origin", "*")
+        .header("Access-Control-Allow-Methods", "GET,POST,PUT,DELETE,OPTIONS")
+        .header("Access-Control-Allow-Headers", "Content-Type,Authorization")
+        .code(204)
+        .send();
 });
 
 // Zod schemas
