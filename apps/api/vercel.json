@@ -1,4 +1,4 @@
 {
-  "buildCommand": "tsc",
+  "buildCommand": "npx tsc",
   "outputDirectory": "dist"
 }
