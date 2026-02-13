@@ -1,20 +1,8 @@
 {
-  "version": 2,
   "buildCommand": "pnpm run build",
   "installCommand": "pnpm install",
   "env": {
-    "NODE_ENV": "production"
-  },
-  "functions": {
-    "src/server.ts": {
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  },
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "src/server.ts"
-    }
-  ]
+    "NODE_ENV": "production",
+    "PORT": "3001"
+  }
 }
