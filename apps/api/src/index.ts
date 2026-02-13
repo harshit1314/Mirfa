@@ -148,7 +148,5 @@ if (process.env.NODE_ENV !== "production") {
     start();
 }
 
-export default async (req: any, res: any) => {
-    await app.ready();
-    app.server.emit("request", req, res);
-};
+// Export handler for Vercel serverless
+export default app;
